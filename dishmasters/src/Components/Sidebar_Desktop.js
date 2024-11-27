@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Sidebar = ({ setShowForm }) => {
+const Sidebar_Desktop = ({ setShowForm }) => {
 return (
     <div className="col-auto col-md-3 col-xl-2 d-none d-md-block greyscale-2" id="canvasMenu">
         <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 position-fixed" id="sidebar-menu">
@@ -127,4 +127,4 @@ return (
 );
 };
 
-export default Sidebar;
+export default Sidebar_Desktop;

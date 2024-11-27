@@ -20,9 +20,9 @@ const App = () => {
       <div className="row flex-wrap">
         <Menu_Icon />
         {/* Sidebar Section */}
-        <div className="col-12 col-md-3 col-lg-2">
-          <Sidebar />
+        <div className="col-12 col-md-3 col-lg-2" id='canvasMenu'>
           <Sidebar_Desktop setShowForm={setShowForm} /> {/* Pass setShowForm as prop */}
+          <Sidebar setShowForm={setShowForm}/>
         </div>
 
         {/* Main Content Section */}

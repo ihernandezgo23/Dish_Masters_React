@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => (
 <footer className="bg-body-secondary text-center w-100 mt-3">
-    <div className="container p-4 pb-0 col-8">
-        <section className="mb-4">
+    <div className="container p-4 pb-0 col-8 d-flex justify-content-center">
+        <section className="mb-4 d-flex justify-content-around w-50">
             <a className="btn text-white" style={{ backgroundColor: '#3b5998' }} href="#!">
                 <i className="bi bi-facebook"></i>
             </a>

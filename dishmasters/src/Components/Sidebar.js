@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Sidebar_Desktop = () => {
+const Sidebar_Desktop = ({ setShowForm }) => {
 return (
 <div className="offcanvas offcanvas-start bg-white text-white w-75" id="offcanvasMenu">
     <div className="offcanvas-header">
@@ -135,9 +135,16 @@ return (
                     </a>
                 </li>
                 <li>
-                    <a href="#" className="nav-link px-0">
-                    Contact Us
-                    </a>
+                <a
+                    href="#"
+                    className="nav-link px-0"
+                    onClick={(e) => {
+                    e.preventDefault(); // Prevent default anchor behavior
+                    setShowForm(true); // Show the form
+                    }}
+                > 
+                <span className="d-sm-inline">Contact Us</span>
+                </a>
                 </li>
                 <li>
                     <a href="#" className="nav-link px-0">
