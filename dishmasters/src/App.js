@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import './styles/App.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-import Menu_Icon from './Components/Menu_Icon';
-import Sidebar from './Components/Sidebar';
-import Sidebar_Desktop from './Components/Sidebar_Desktop';
-import Header from './Components/Header';
-import SearchBar from './Components/SearchBar';
-import FormComponent from './Components/Form';
-import Carousel from './Components/Carousel';
-import Explore from './Components/Explore';
-import Footer from './Components/Footer';
+import Menu_Icon from './Components/mainPage/Menu_Icon';
+import Sidebar from './Components/mainPage/Sidebar';
+import Sidebar_Desktop from './Components/mainPage/Sidebar_Desktop';
+import Header from './Components/mainPage/Header';
+import SearchBar from './Components/mainPage/SearchBar';
+import FormComponent from './Components/mainPage/Form';
+import Carousel from './Components/mainPage/Carousel';
+import Explore from './Components/mainPage/Explore';
+import Footer from './Components/mainPage/Footer';
 
 const App = () => {
   const [showForm, setShowForm] = useState(false); // State to manage form visibility
