@@ -63,7 +63,7 @@ i18n
           "language": "Euskara",
 
           // BILAKETA
-          "findPerfectDish": "Aurki itzazu zure plater gustukoena...",
+          "findPerfectDish": "Aurki itzazu zure plater gustukoenak...",
           "searchPlaceholder": "Bilatu",
 
           // TITULOA

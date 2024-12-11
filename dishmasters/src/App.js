@@ -11,7 +11,7 @@ import FormComponent from './Components/mainPage/Form';
 import Carousel from './Components/mainPage/Carousel';
 import Explore from './Components/mainPage/Explore';
 import Footer from './Components/mainPage/Footer';
-import './i18n'; // Asegúrate de que el archivo de configuración se importe aquí
+import './i18n';
 
 
 const App = () => {
