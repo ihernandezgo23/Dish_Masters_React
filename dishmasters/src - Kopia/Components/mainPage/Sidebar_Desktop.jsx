@@ -24,7 +24,7 @@ const Sidebar_Desktop = ({ setShowForm }) => {
         <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
           {/* Home Link */}
           <li className="nav-item">
-            <a href="/faq.html" className="nav-link align-middle px-0">
+            <a href="#" className="nav-link align-middle px-0">
               <i className="fs-3 bi-house"></i>
               <span className="ms-1 d-none d-sm-inline">{t('home')}</span>
             </a>
@@ -110,7 +110,7 @@ const Sidebar_Desktop = ({ setShowForm }) => {
                 </a>
               </li>
               <li>
-                <a href="faq.html" className="nav-link px-0">
+                <a href="#" className="nav-link px-0">
                   <span className="d-none d-sm-inline">{t('faq')}</span>
                 </a>
               </li>
