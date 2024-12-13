@@ -14,6 +14,7 @@ import Footer from './Components/mainPage/Footer';
 import FAQ from './Components/AboutUs/FAQ';
 import Header2 from "./Components/AboutUs/Header";
 import Footer2 from './Components/AboutUs/Footer';
+import { Helmet } from 'react-helmet';
 
 import './i18n';
 import { Component } from 'react';
@@ -51,30 +52,33 @@ import { Component } from 'react';
 const App = () => {
   return (
       <div>
-        <Header2/>   
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Dishmasters - Explore, Share, and Cook</title>
+            <meta name="description" content="Dishmasters is a recipe platform for cooking enthusiasts." />
+        </Helmet>
 
+        <Header2/>   
+        {/* INFORMATION ABOUT DISHMASTERS*/}
+        <h1 className="space-y-4 px-2 mx-auto max-w-5xl pt-4">1. General information about Dishmasters</h1>
         <FAQ 
             title="Why Dishmasters?" 
             text="Dishmasters is a recipe website where anyone can explore new dishes, find inspiration, or share their
             own culinary creations. It features the most up-to-date database of dishes from around the world and
             aims to be the ultimate destination for cooking enthusiasts."
         />
-
+        <FAQ 
+            title="Who is behind Dishmasters?" 
+            text="Dishmasters is a recipe website where anyone can explore new dishes, find inspiration, or share their
+            own culinary creations. It features the most up-to-date database of dishes from around the world and
+            aims to be the ultimate destination for cooking enthusiasts."
+        />  
         <FAQ 
             title="Why is Dishmasters special?"
             text="Users can explore their favorite meals, try them at home, and then rate and share their feedback. The
             platform also allows users to like posts and save their favorites, participate in exciting Dishy Challenges,
             and enjoy quick, one-minute short videos for bite-sized inspiration." 
         />
-
-        <FAQ 
-            title="Dishmasters team main goal"
-            text="Our objective with this project is to expand the culinary knowledge of the people, giving them access
-            to various recipes all around the globe, and being able to upload their own, with the huge amount of
-            meals they will have at their disposal to learn. A group of them will surely get the attention of the
-            users, and they will start liking to cook different types of dishes." 
-        />
-
         <FAQ 
             title="Where we can find more about Dishmasters"
             text={
@@ -86,8 +90,52 @@ const App = () => {
                 </>
             }
         />
+        <hr className="mx-auto max-w-5xl text-black"></hr>
+
+        <h1 className="space-y-4 px-2 mx-auto max-w-5xl pt-4">2. Account and Registration</h1>
+        <FAQ 
+            title="How can I create an account on Dishmasters?"
+            text="On our website's main page, the sign-in button will redirect you to the login page, where on the top 
+            you can see a link where you can create your account easily." 
+        />
+        <FAQ 
+            title="Can I change my email address or account information?"
+            text="The users cannot manually change their email account but can contact the support team by filling out 
+            the form that you have on the menu on the main page, and a support team member will contact you soon." 
+        />
+        <hr className="mx-auto max-w-5xl text-black"></hr>
+
+        <h1 className="space-y-4 px-2 mx-auto max-w-5xl pt-4">3. Challenges and Participation
+        </h1>
+        <FAQ 
+            title="What are DishChallenges and how can I participate?"
+            text="The Dishchangelles is a dedicated page to have fun with the community where users can take part in
+            themed cooking or recipe daily challenges. It is an engaging way to connect with others, display
+            skills, and enjoy friendly competition." 
+        />
+        <FAQ 
+            title="How do I upload a recipe for a challenge?"
+            text="COMMING SOON..." 
+        />
+        <hr className="mx-auto max-w-5xl text-black"></hr>
+
+        <h1 className="space-y-4 px-2 mx-auto max-w-5xl pt-4">4. Privacy and Security</h1>
+        <FAQ 
+            title="How do we protect the personal information?"
+            text="We take your privacy seriously and implement several security measures to protect your personal data. 
+            This includes using encryption to safeguard your sensitive information, limiting access to authorized personnel,
+            and regularly reviewing our security protocols to ensure compliance with industry standards." 
+        />
+        <FAQ 
+            title="Can I delete my account and data?"
+            text="Yes, you have the right to delete your account and all associated data at any time. 
+            Just you have to contact with our support team and just tell that you want to delete all your data
+            and they will provide next intructions." 
+        />
+
 
         
+
         <Footer2 />
       </div>
   );
