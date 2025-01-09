@@ -6,6 +6,8 @@ function Header({}) {
             <h1 className="h5 h1-md">
                 About<i className="text-white"> US </i>
             </h1>
+            <p className="lead text-muted pt-4">Discover Our Story and Team</p>
+
         </div>
         
     );

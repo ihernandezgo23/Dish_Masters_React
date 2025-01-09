@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}", // Archivos React donde usarás Tailwind
   ],
   theme: {
-    extend: {},
-  },
+    extend: {
+      colors: {
+        'dishColor':'#ffbd59',
+      }
+    },
+  },  
   plugins: [],
 };

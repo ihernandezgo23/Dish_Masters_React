@@ -1,5 +1,8 @@
 import './styles/App.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useState } from 'react';
+
 
 import Menu_Icon from './Components/mainPage/Menu_Icon';
 import Sidebar from './Components/mainPage/Sidebar';
@@ -15,6 +18,13 @@ import Header2 from "./Components/FAQ/Header";
 import Footer2 from './Components/FAQ/Footer';
 import Header3 from './Components/AboutUs/Header'
 import Content from './Components/AboutUs/Content';
+import Users from './Components/Users/Users';
+
+import Challenge from './Components/MyFeed/Challenge';
+import SeasonRecipes from './Components/MyFeed/SeasonRecipes';
+import WeeklyRecipes from './Components/MyFeed/WeeklyRecipes';
+import MoreSeason from './Components/MyFeed/MoreInfoSeason';
+import MoreWeek from './Components/MyFeed/MoreInfoWeek';
 
 import './i18n';
 
@@ -133,14 +143,38 @@ import './i18n';
 
 // export default App;
 
-const App = () => {
-    return (
-        <div>
-            <Header3 />
-            <Content />
-        </div>
-    );
-    
+//const App = () => {
+//    return (
+//        <div>
+//            <Header3 />
+//            <Content />
+//        </div>
+//    );
+//}
+
+//function App() {
+//  return (
+//    <Router>
+//      <Routes>
+//        <Route path="/users" element={<Users />} />
+//      </Routes>
+//    </Router>
+//  );
+//}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+          <Route path="/" element={<Challenge />} />
+          <Route path="/season" element={<SeasonRecipes />} />
+          <Route path="/weekly" element={<WeeklyRecipes />} />
+
+          <Route path="/season/:challengeId" element={<MoreSeason />} />
+          <Route path="/weekly/:challengeId" element={<MoreWeek />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
