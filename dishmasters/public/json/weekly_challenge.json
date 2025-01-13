@@ -17,8 +17,8 @@
         "start": "2025-01-10",
         "deadline": "2025-01-20",
         "img": "/img/challenges/coockies.jpg",
-        "status": "not started",
-        "color": "warning",
+        "status": "ongoing",
+        "color": "success",
         "winner": "soon"
     }
 ]

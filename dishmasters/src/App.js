@@ -3,28 +3,32 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React, { useState } from 'react';
 
-import Menu_Icon from './Components/mainPage/Menu_Icon';
-import Sidebar from './Components/mainPage/Sidebar';
-import Sidebar_Desktop from './Components/mainPage/Sidebar_Desktop';
-import Header from './Components/mainPage/Header';
-import SearchBar from './Components/mainPage/SearchBar';
-import FormComponent from './Components/mainPage/Form';
-import Carousel from './Components/mainPage/Carousel';
-import Explore from './Components/mainPage/Explore';
-import Footer from './Components/mainPage/Footer';
+// ALL
+import Footer from './Components/FAQ/Footer';
+
+// ABOUT US
+import HeaderAbout from './Components/AboutUs/HeaderAbout';
+import ContentAbout from './Components/AboutUs/Content';
+
+// FAQ
 import FAQ from './Components/FAQ/FAQ';
 import Header2 from "./Components/FAQ/Header";
-import Footer2 from './Components/FAQ/Footer';
-import Header3 from './Components/AboutUs/Header';
-import Content from './Components/AboutUs/Content';
-import Users from './Components/Users/Users';
 
+//RESTAURANTS
+import HeaderRes from './Components/Restaurants/Header';
+import Spots from './Components/Restaurants/spots';
+
+// CHALLENGES
 import Challenge from './Components/MyFeed/Challenge';
 import SeasonRecipes from './Components/MyFeed/SeasonRecipes';
 import WeeklyRecipes from './Components/MyFeed/WeeklyRecipes';
 import MoreSeason from './Components/MyFeed/MoreInfoSeason';
 import MoreWeek from './Components/MyFeed/MoreInfoWeek';
 
+// USER PANEL
+import Users from './Components/Users/Users';
+
+// TRADUCTIONS
 import './i18n';
 
 function App() {
@@ -33,13 +37,67 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Challenge />} />
+
+        <Route path="/" 
+          element={
+            <div className="container mt-5 d-flex flex-column justify-content-center align-items-center" id="main-heading">
+              <h1 className="h5 h1-md">
+                  Dishmasters<i className="text-white"> CREATIONS </i>
+              </h1>
+
+              <a href="/about" className="image-hover">
+                  about page
+              </a>
+              <a href="/faq" className="image-hover">
+                  faq page
+              </a>
+              <a href="/restaurants" className="image-hover">
+                  restaurants page
+              </a>
+              <a href="/challenges" className="image-hover">
+                  challenges page
+              </a>
+              <a href="/users" className="image-hover">
+                  user panel page
+              </a>
+            </div>
+          }
+        />
+
+        <Route path="/about" 
+          element={
+            <div>
+              <HeaderAbout />
+              <ContentAbout />
+              <Footer />
+            </div>
+          }
+        />
+
+        <Route path="/restaurants" 
+          element={
+            <div>
+              <HeaderRes />
+              <Spots />
+              <Footer />
+            </div>
+          }
+        />        
+
+        <Route path="/challenges" 
+          element={
+            <div>
+              <Challenge />
+              <Footer />
+            </div>
+          }
+        />
         <Route path="/season" element={<SeasonRecipes />} />
         <Route path="/weekly" element={<WeeklyRecipes />} />
         <Route path="/season/:challengeId" element={<MoreSeason />} />
         <Route path="/weekly/:challengeId" element={<MoreWeek />} />
 
-        <Route path="/about" element={
+        <Route path="/faq" element={
           <div>
             <Header2 />   
             <h1 className="space-y-4 px-2 mx-auto max-w-5xl pt-4">1. General information about Dishmasters</h1>
@@ -113,9 +171,14 @@ function App() {
               Just contact our support team and tell them that you want to delete all your data, and they will provide further instructions." 
             />
 
-            <Footer2 />
+            <Footer />
           </div>
         } />
+
+        <Route path="/about" elements={
+          <div>
+            <HeaderAbout />
+          </div>} />
         
         <Route path="/users" element={<Users />} />
       </Routes>

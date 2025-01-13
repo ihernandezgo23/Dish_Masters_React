@@ -8,9 +8,10 @@ function Header({}) {
             </h1>
 
             <p className='space-y-4 px-2 mx-auto max-w-5xl pt-12 text-center'>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime obcaecati ullam fugiat minus provident, eligendi voluptate 
-                sequi tempora vitae maiores explicabo odio, vero quia numquam earum consequatur molestias non facilis.
+            Here, you'll find answers to common questions about Dishmasters, from how to explore recipes to sharing your own culinary creations. 
+            If you need further assistance, feel free to contact us!
             </p>
+            <p>Your can check for more detailed information in <a href="/about">about us</a></p>
         </div>
     );
 }

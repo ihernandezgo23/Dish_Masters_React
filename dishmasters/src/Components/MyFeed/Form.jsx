@@ -19,7 +19,7 @@ return (
             <label htmlFor="name" className="form-label">
             Name and Surname
             </label>
-            <input
+            <input required
             type="text"
             className="form-control bg-dark text-light border-secondary"
             id="name"
@@ -32,7 +32,7 @@ return (
             <label htmlFor="email" className="form-label">
             Email
             </label>
-            <input
+            <input required
             type="email"
             className="form-control bg-dark text-light border-secondary"
             id="email"
@@ -45,7 +45,7 @@ return (
             <label htmlFor="message" className="form-label">
             Recipe explanation
             </label>
-            <textarea
+            <textarea required
             className="form-control bg-dark text-light border-secondary"
             id="message"
             rows="3"
@@ -58,11 +58,11 @@ return (
             <label htmlFor="fileUpload" className="form-label">
                 Upload your Recipe (Image or PDF)
             </label>
-            <input
+            <input required
                 type="file"
                 className="form-control bg-dark text-light border-secondary"
                 id="fileUpload"
-                accept=".pdf,.doc,.docx,.jpg,.png,.jpeg"
+                accept=".pdf,.jpg,.png,.jpeg"
             />
         </div>
 

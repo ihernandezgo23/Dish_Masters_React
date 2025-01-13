@@ -28,8 +28,8 @@
         "start": "2025-01-10",
         "deadline": "2025-01-16",
         "img": "/img/challenges/challenge3.jpg",
-        "status": "not started",
-        "color": "warning",
+        "status": "ongoing",
+        "color": "success",
         "winner": "soon"
     }
 ]
