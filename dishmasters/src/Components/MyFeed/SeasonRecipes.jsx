@@ -29,6 +29,10 @@ function SeasonRecipes() {
                 Season<i className="text-white"> Recipes </i> Challenges
             </h1>
 
+            <Link to="/add-challenge">
+                <button className="btn btn-primary mb-4">Add New Challenge</button>
+            </Link>
+
             <div className="row pt-16 justify-content-center">
                 {recipes.map((recipe, index) => (
                     <div className="col-md-6 col-lg-4 mb-4" key={index}>

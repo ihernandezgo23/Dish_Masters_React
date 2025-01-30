@@ -25,6 +25,20 @@ import WeeklyRecipes from './Components/MyFeed/WeeklyRecipes';
 import MoreSeason from './Components/MyFeed/MoreInfoSeason';
 import MoreWeek from './Components/MyFeed/MoreInfoWeek';
 
+import AddChallenge from './Components/MyFeed/AddChallenge';
+
+// TASTE TRENDS
+import HeaderTrends from './Components/TasteTrends/HeaderTrends'
+import ContentTrends from './Components/TasteTrends/ContentTrends';
+
+// SEASON RECIPES
+import HeaderSeason from './Components/SeasonRecipes/HeaderSeason'
+import ContentRecipes from './Components/SeasonRecipes/ContentRecipes';
+
+// WORLD DISHSES
+import HeaderWorld from './Components/WorldDishes/HeaderWorld';
+import ContentWorld from './Components/WorldDishes/ContentWord';
+
 // USER PANEL
 import Users from './Components/Users/Users';
 
@@ -32,7 +46,7 @@ import Users from './Components/Users/Users';
 import './i18n';
 
 function App() {
-  const [showForm, setShowForm] = useState(false); // State to manage form visibility
+  const [showForm, setShowForm] = useState(false);
 
   return (
     <Router>
@@ -57,9 +71,48 @@ function App() {
               <a href="/challenges" className="image-hover">
                   challenges page
               </a>
+              <a href="/tasteTrends" className="image-hover">
+                  taste trends page
+              </a>
+              <a href="/seasonRecipes" className="image-hover">
+                  season recipes page
+              </a>
+              <a href="/worldDishes" className="image-hover">
+                  world dishes page
+              </a>
               <a href="/users" className="image-hover">
                   user panel page
               </a>
+            </div>
+          }
+        />
+
+        <Route path="/worldDishes" 
+          element={
+            <div>
+              <HeaderWorld />
+              <ContentWorld />
+              <Footer />
+            </div>
+          }
+        />
+
+        <Route path="/seasonRecipes" 
+          element={
+            <div>
+              <HeaderSeason />
+              <ContentRecipes />
+              <Footer />
+            </div>
+          }
+        />
+
+        <Route path="/TasteTrends" 
+          element={
+            <div>
+              <HeaderTrends />
+              <ContentTrends />
+              <Footer />
             </div>
           }
         />
@@ -83,6 +136,9 @@ function App() {
             </div>
           }
         />        
+
+        <Route path="/" element={<SeasonRecipes />} />
+        <Route path="/add-challenge" element={<AddChallenge />} />
 
         <Route path="/challenges" 
           element={
@@ -175,10 +231,7 @@ function App() {
           </div>
         } />
 
-        <Route path="/about" elements={
-          <div>
-            <HeaderAbout />
-          </div>} />
+        
         
         <Route path="/users" element={<Users />} />
       </Routes>
