@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function RecipeList() {
+function RecipeList() {
   const [recipes, setRecipes] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
@@ -8,9 +8,6 @@ export default function RecipeList() {
   useEffect(() => {
     fetch("./json/tasteTrends.json")
       .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to fetch recipes");
-        }
         return response.json();
       })
       .then((data) => {
@@ -20,14 +17,26 @@ export default function RecipeList() {
         }, 700);
       })
       .catch((error) => {
-        console.error("Error fetching recipes:", error);
+        console.log("Error fetching recipes:", error);
       });
   }, []);
 
   return (
     <div className="p-4">
       {isLoading ? (
-        <p>Loading recipes...</p>
+        <div className="flex justify-center items-center">
+          <button
+            type="button"
+            className="py-2.5 px-4 inline-flex justify-center items-center gap-2 bg-[#FFBD59] text-black rounded-lg cursor-pointer font-semibold text-base text-center shadow-xs transition-all duration-500"
+          >
+            <span
+              className="animate-spin inline-block w-4 h-4 border-[3px] border-current border-t-transparent text-white rounded-full"
+              role="status"
+              aria-label="loading"
+            ></span>{" "}
+            Loading
+          </button>
+        </div>
       ) : selectedRecipe ? (
         <div className="p-6 border rounded-lg shadow-md bg-white max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -111,3 +120,5 @@ export default function RecipeList() {
     </div>
   );
 }
+
+export default RecipeList;
